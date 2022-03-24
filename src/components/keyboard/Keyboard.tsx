@@ -93,10 +93,10 @@ export const Keyboard = ({
               isRevealing={isRevealing}
             />
           ))}
+          <Key width={65.4} value="ENTER" onClick={onClick}>
+            {ENTER_TEXT}
+          </Key>
         </div>
-        <Key width={65.4} value="ENTER" onClick={onClick}>
-          {ENTER_TEXT}
-        </Key>
       </div>
     </div>
   )
