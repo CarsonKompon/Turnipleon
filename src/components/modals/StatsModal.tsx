@@ -11,6 +11,8 @@ import {
   NEW_WORD_TEXT,
   SHARE_TEXT,
 } from '../../constants/strings'
+import { solution } from '../../lib/words'
+import { Cell } from '../grid/Cell'
 
 type Props = {
   isOpen: boolean
@@ -86,6 +88,24 @@ export const StatsModal = ({
             {SHARE_TEXT}
           </button>
         </div>
+      )}
+      {isGameLost ? (
+        <>
+          <br />
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'center',
+            }}
+          >
+            {solution.split('').map((key) => (
+              <Cell value={key} status="absent" />
+            ))}
+          </div>
+        </>
+      ) : (
+        <></>
       )}
     </BaseModal>
   )
