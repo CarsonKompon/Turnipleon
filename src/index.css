@@ -199,8 +199,7 @@ img {
 }
 
 .textButton {
-  margin-left: 20px;
-  margin-right: 20px;
+  width: 80px;
 }
 
 .no-click {

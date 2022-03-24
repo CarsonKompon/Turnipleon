@@ -15,11 +15,12 @@ import sprPumpkin from '../icons/pumpkin.png'
 import sprSlayQueen from '../icons/slayqueen32.png'
 import sprStrawberry from '../icons/strawberry.png'
 import sprCranCran from '../icons/cran-cran.png'
+import sprNurseBerry from '../icons/nurse-berry.png'
 
 export const keys = [
   ['A', 'C', 'D', 'L', 'J', 'B'],
-  ['K', 'I', 'O', 'E', 'P', 'Q'],
-  ['G', 'M', 'F', 'H', 'N'],
+  ['K', 'R', 'O', 'E', 'P', 'Q'],
+  ['G', 'M', 'F', 'H', 'I', 'N'],
 ]
 
 export const icons = {
@@ -40,6 +41,7 @@ export const icons = {
   O: sprCranCran,
   P: sprAppleCatGreen,
   Q: sprAppleCatYellow,
+  R: sprNurseBerry,
 }
 
 export const names = {
@@ -60,6 +62,7 @@ export const names = {
   O: 'Crancran',
   P: 'Green Apple Cat',
   Q: 'Yellow Apple Cat',
+  R: 'Nurse Berry',
 }
 
 export const flatKeys = keys.reduce((a, i) => a.concat(i), [])
