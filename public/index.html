@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦉</text></svg>">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="%REACT_APP_GAME_DESCRIPTION%" />
@@ -23,20 +22,30 @@
     -->
     <title>%REACT_APP_GAME_NAME%</title>
 
-    <% if (process.env.NODE_ENV === 'production' && process.env.REACT_APP_GOOGLE_MEASUREMENT_ID != null) { %>
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=%REACT_APP_GOOGLE_MEASUREMENT_ID%"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <% if (process.env.NODE_ENV === 'production' &&
+    process.env.REACT_APP_GOOGLE_MEASUREMENT_ID != null) { %>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=%REACT_APP_GOOGLE_MEASUREMENT_ID%"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
 
-        gtag('config', '%REACT_APP_GOOGLE_MEASUREMENT_ID%');
-      </script>
-    <% } %>
-    <% if (process.env.NODE_ENV === 'production' && process.env.REACT_APP_PLAUSIBLE_DOMAIN != null) { %>
-      <!-- Plausible Analytics -->
-      <script defer data-domain="%REACT_APP_PLAUSIBLE_DOMAIN%" src="https://plausible.io/js/plausible.js"></script>
+      gtag('config', '%REACT_APP_GOOGLE_MEASUREMENT_ID%')
+    </script>
+    <% } %> <% if (process.env.NODE_ENV === 'production' &&
+    process.env.REACT_APP_PLAUSIBLE_DOMAIN != null) { %>
+    <!-- Plausible Analytics -->
+    <script
+      defer
+      data-domain="%REACT_APP_PLAUSIBLE_DOMAIN%"
+      src="https://plausible.io/js/plausible.js"
+    ></script>
     <% } %>
   </head>
   <body>
