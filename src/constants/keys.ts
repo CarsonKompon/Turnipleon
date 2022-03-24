@@ -38,4 +38,4 @@ export const icons = {
 }
 
 export const flatKeys = keys.reduce((a, i) => a.concat(i), [])
-export const birdAwards = ['🦩', '🦚', '🦉', '🦜', '🦆', '🐓']
+export const birdAwards = ['🥗', '🧅', '🍋', '🥑', '🍓', '🍑']
