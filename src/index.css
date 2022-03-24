@@ -197,3 +197,8 @@ img {
   object-fit: scale-down;
   overflow: hidden;
 }
+
+.textButton {
+  margin-left: 20px;
+  margin-right: 20px;
+}

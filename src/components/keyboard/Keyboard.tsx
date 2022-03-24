@@ -77,25 +77,25 @@ export const Keyboard = ({
             isRevealing={isRevealing}
           />
         ))}
-      </div>
-      <div className="flex justify-center">
-        <Key width={65.4} value="ENTER" onClick={onClick}>
-          {ENTER_TEXT}
-        </Key>
-        <div className="flex justify-center mb-1">
-        {keys[2].map((key) => (
-          <Key
-            value={key}
-            key={key}
-            isEmoji={true}
-            onClick={onClick}
-            status={charStatuses[key]}
-            isRevealing={isRevealing}
-          />
-        ))}
-      </div>
         <Key width={65.4} value="DELETE" onClick={onClick}>
           {DELETE_TEXT}
+        </Key>
+      </div>
+      <div className="flex justify-center">
+        <div className="flex justify-center mb-1">
+          {keys[2].map((key) => (
+            <Key
+              value={key}
+              key={key}
+              isEmoji={true}
+              onClick={onClick}
+              status={charStatuses[key]}
+              isRevealing={isRevealing}
+            />
+          ))}
+        </div>
+        <Key width={65.4} value="ENTER" onClick={onClick}>
+          {ENTER_TEXT}
         </Key>
       </div>
     </div>

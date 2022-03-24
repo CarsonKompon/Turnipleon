@@ -2,6 +2,7 @@ import { ReactNode } from 'react'
 import classnames from 'classnames'
 import { CharStatus } from '../../lib/statuses'
 import { MAX_WORD_LENGTH, REVEAL_TIME_MS } from '../../constants/settings'
+import { ENTER_TEXT } from '../../constants/strings'
 import { icons } from '../../constants/keys'
 import { getStoredIsHighContrastMode } from '../../lib/localStorage'
 
@@ -63,7 +64,7 @@ export const Key = ({
         {isEmoji ? (
           <img style={styles} src={(icons as any)[value]} />
         ) : (
-          <>{children || value}</>
+          <p className="textButton">{children || value}</p>
         )}
       </button>
     </>
