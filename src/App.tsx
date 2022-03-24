@@ -76,9 +76,9 @@ function App() {
     }
     if (loaded.guesses.length === MAX_CHALLENGES && !gameWasWon) {
       setIsGameLost(true)
-      showErrorAlert(CORRECT_WORD_MESSAGE(solution), {
-        persist: true,
-      })
+      // showErrorAlert(CORRECT_WORD_MESSAGE + ' ' + solution, {
+      //   persist: true,
+      // })
     }
     return loaded.guesses
   })
@@ -232,10 +232,10 @@ function App() {
       if (guesses.length === MAX_CHALLENGES - 1) {
         setStats(addStatsForCompletedGame(stats, guesses.length + 1))
         setIsGameLost(true)
-        showErrorAlert(CORRECT_WORD_MESSAGE(solution), {
-          persist: true,
-          delayMs: REVEAL_TIME_MS * MAX_WORD_LENGTH + 1,
-        })
+        // showErrorAlert(CORRECT_WORD_MESSAGE + ' ' + solution, {
+        //   persist: true,
+        //   delayMs: REVEAL_TIME_MS * MAX_WORD_LENGTH + 1,
+        // })
       }
     }
   }

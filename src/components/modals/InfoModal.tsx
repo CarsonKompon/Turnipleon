@@ -8,11 +8,13 @@ type Props = {
 
 export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
-    <BaseModal title="How to play" isOpen={isOpen} handleClose={handleClose}>
+    <BaseModal title="How to play:" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        Guess the sequence of Turnip Boy characters. Characters may occur more
-        than once, but never next to itself. After each guess, the color of the
-        tiles will change to show how close your guess was to the solution.
+        Guess the sequence of Turnip Boy characters. While we won't tell you
+        them all, there are rules that defines the way that characters are laid
+        out. There are no duplicates, some characters are in certain positions,
+        some characters are paired with others, ect. You'll have to play more to
+        find all the hidden rules!
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
@@ -23,8 +25,8 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
           status="correct"
         />
         <Cell value="C" />
-        <Cell value="G" />
         <Cell value="F" />
+        <Cell value="J" />
         <Cell value="N" />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
@@ -40,7 +42,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
           value="B"
           status="present"
         />
-        <Cell value="E" />
+        <Cell value="G" />
         <Cell value="H" />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
@@ -49,10 +51,10 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
 
       <div className="flex justify-center mb-1 mt-4">
         <Cell value="F" />
-        <Cell value="E" />
+        <Cell value="I" />
         <Cell value="A" />
         <Cell isRevealing={true} isCompleted={true} value="D" status="absent" />
-        <Cell value="G" />
+        <Cell value="P" />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
         Annie is not in the solution in any spot.
