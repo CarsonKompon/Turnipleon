@@ -1,9 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import ReactGA from 'react-ga4'
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { AlertProvider } from './context/AlertContext'
+
+const TRACKING_ID = 'G-8TY21HS4SL'
+
+ReactGA.initialize(TRACKING_ID)
+ReactGA.send('pageview')
 
 ReactDOM.render(
   <React.StrictMode>
