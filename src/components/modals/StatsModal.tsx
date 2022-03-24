@@ -13,6 +13,7 @@ import {
 } from '../../constants/strings'
 import { solution } from '../../lib/words'
 import { Cell } from '../grid/Cell'
+import { Discord } from 'react-bootstrap-icons'
 
 type Props = {
   isOpen: boolean
@@ -108,6 +109,14 @@ export const StatsModal = ({
       ) : (
         <></>
       )}
+      <br />
+      <a
+        className="discord"
+        href="https://snoozykazoo.com/discord"
+        target="_blank"
+      >
+        Join the Snoozy Kazoo Discord <Discord style={{ display: 'inline' }} />
+      </a>
     </BaseModal>
   )
 }

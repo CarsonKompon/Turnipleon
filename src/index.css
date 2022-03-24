@@ -206,3 +206,7 @@ img {
 .no-click {
   pointer-events: none;
 }
+
+.discord {
+  color: #5865f2;
+}

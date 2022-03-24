@@ -26,7 +26,7 @@ export const shareStatus = (
   const textToShare =
     `https://www.turnipleon.com/ #${solutionIndex} ${awardEmoji} ${
       lost ? 'X' : guesses.length
-    }/${MAX_CHALLENGES}${isHardMode ? '*' : ''}\n\n` +
+    }/${MAX_CHALLENGES}${isHardMode ? '🔸' : ''}\n\n` +
     generateEmojiGrid(guesses, getEmojiTiles(isDarkMode, isHighContrastMode)) +
     '\n' +
     'Streak: ' +
