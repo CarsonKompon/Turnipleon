@@ -62,7 +62,11 @@ export const Key = ({
     <>
       <button className={classes} onClick={handleClick}>
         {isEmoji ? (
-          <img style={styles} src={(icons as any)[value]} />
+          <img
+            className="no-click"
+            style={styles}
+            src={(icons as any)[value]}
+          />
         ) : (
           <p className="textButton">{children || value}</p>
         )}
