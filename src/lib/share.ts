@@ -24,7 +24,7 @@ export const shareStatus = (
   const awardEmoji = lost ? '🌱' : birdAwards[guesses.length - 1]
 
   const textToShare =
-    `${GAME_TITLE} #${solutionIndex} ${awardEmoji} ${
+    `https://www.turnipleon.com/ #${solutionIndex} ${awardEmoji} ${
       lost ? 'X' : guesses.length
     }/${MAX_CHALLENGES}${isHardMode ? '*' : ''}\n\n` +
     generateEmojiGrid(guesses, getEmojiTiles(isDarkMode, isHighContrastMode)) +
