@@ -21,7 +21,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         characters. While we won't tell you them all, there are rules that
         define the way that characters are laid out. There are no duplicates,
         some characters are in certain positions, some characters are paired
-        with others, ect. You'll have to play more to find all the hidden rules!
+        with others, etc. You'll have to play more to find all the hidden rules!
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
