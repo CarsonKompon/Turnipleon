@@ -32,25 +32,26 @@ export const Keyboard = ({
     }
   }
 
-  useEffect(() => {
-    const listener = (e: KeyboardEvent) => {
-      if (e.code === 'Enter') {
-        onEnter()
-      } else if (e.code === 'Backspace') {
-        onDelete()
-      } else {
-        const key = localeAwareUpperCase(e.key)
-        // TODO: check this test if the range works with non-english letters
-        if (key.length === 1 && key >= 'A' && key <= 'Z') {
-          onChar(key)
-        }
-      }
-    }
-    window.addEventListener('keyup', listener)
-    return () => {
-      window.removeEventListener('keyup', listener)
-    }
-  }, [onEnter, onDelete, onChar])
+  // KEYBOARD INPUT
+  // useEffect(() => {
+  //   const listener = (e: KeyboardEvent) => {
+  //     if (e.code === 'Enter') {
+  //       onEnter()
+  //     } else if (e.code === 'Backspace') {
+  //       onDelete()
+  //     } else {
+  //       const key = localeAwareUpperCase(e.key)
+  //       // TODO: check this test if the range works with non-english letters
+  //       if (key.length === 1 && key >= 'A' && key <= 'Z') {
+  //         onChar(key)
+  //       }
+  //     }
+  //   }
+  //   window.addEventListener('keyup', listener)
+  //   return () => {
+  //     window.removeEventListener('keyup', listener)
+  //   }
+  // }, [onEnter, onDelete, onChar])
 
   return (
     <div>
