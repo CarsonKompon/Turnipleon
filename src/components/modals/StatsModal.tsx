@@ -81,6 +81,7 @@ export const StatsModal = ({
                 isHardMode,
                 isDarkMode,
                 isHighContrastMode,
+                gameStats.currentStreak,
                 handleShareToClipboard
               )
             }}

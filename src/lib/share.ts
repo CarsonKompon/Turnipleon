@@ -1,9 +1,11 @@
+import { useState } from 'react'
 import { getGuessStatuses } from './statuses'
 import { solutionIndex } from './words'
 import { GAME_TITLE } from '../constants/strings'
 import { birdAwards } from '../constants/keys'
 import { MAX_CHALLENGES } from '../constants/settings'
 import { UAParser } from 'ua-parser-js'
+import { loadStats } from './stats'
 
 const webShareApiDeviceTypes: string[] = ['mobile', 'smarttv', 'wearable']
 const parser = new UAParser()
@@ -16,6 +18,7 @@ export const shareStatus = (
   isHardMode: boolean,
   isDarkMode: boolean,
   isHighContrastMode: boolean,
+  streaks: number,
   handleShareToClipboard: () => void
 ) => {
   const awardEmoji = lost ? '🌱' : birdAwards[guesses.length - 1]
@@ -24,7 +27,10 @@ export const shareStatus = (
     `${GAME_TITLE} #${solutionIndex} ${awardEmoji} ${
       lost ? 'X' : guesses.length
     }/${MAX_CHALLENGES}${isHardMode ? '*' : ''}\n\n` +
-    generateEmojiGrid(guesses, getEmojiTiles(isDarkMode, isHighContrastMode))
+    generateEmojiGrid(guesses, getEmojiTiles(isDarkMode, isHighContrastMode)) +
+    '\n' +
+    'Streak: ' +
+    streaks
 
   const shareData = { text: textToShare }
 
