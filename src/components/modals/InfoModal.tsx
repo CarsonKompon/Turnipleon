@@ -19,7 +19,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
           Turnip Boy
         </a>{' '}
         characters. While we won't tell you them all, there are rules that
-        defines the way that characters are laid out. There are no duplicates,
+        define the way that characters are laid out. There are no duplicates,
         some characters are in certain positions, some characters are paired
         with others, ect. You'll have to play more to find all the hidden rules!
       </p>
