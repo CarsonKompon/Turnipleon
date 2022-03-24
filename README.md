@@ -1,4 +1,4 @@
-# Turnipleon
+# Turniple
 
 This is a wordle clone featuring characters from Turnip Boy Commits Tax Evasion!
 

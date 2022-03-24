@@ -18,7 +18,7 @@ export const shareStatus = (
   isHighContrastMode: boolean,
   handleShareToClipboard: () => void
 ) => {
-  const awardEmoji = lost ? '🥚' : birdAwards[guesses.length - 1];
+  const awardEmoji = lost ? '🥚' : birdAwards[guesses.length - 1]
 
   const textToShare =
     `${GAME_TITLE} ${awardEmoji} ${solutionIndex} ${
