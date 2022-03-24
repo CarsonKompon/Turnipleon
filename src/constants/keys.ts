@@ -42,5 +42,25 @@ export const icons = {
   Q: sprAppleCatYellow,
 }
 
+export const names = {
+  A: 'Turnip Boy',
+  B: 'Mayor Onion',
+  C: 'Old Man Lemon',
+  D: 'Annie',
+  E: 'Red Apple Cat',
+  F: 'slayQueen32',
+  G: 'Blueberry',
+  H: 'Shady Blueberry',
+  I: 'Carrot',
+  J: 'Acorn',
+  K: 'Deb',
+  L: 'Jerry',
+  M: 'Strawberry',
+  N: 'Pumpkin',
+  O: 'Crancran',
+  P: 'Green Apple Cat',
+  Q: 'Yellow Apple Cat',
+}
+
 export const flatKeys = keys.reduce((a, i) => a.concat(i), [])
 export const birdAwards = ['🥗', '🧅', '🍋', '🥑', '🍓', '🍑']
